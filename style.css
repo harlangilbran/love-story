@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-image: url(img/bg.jpeg);
+  background-position: center center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.paper {
+  background-image: url(img/paper.webp);
+  background-size: contain;
+  background-position: center center;
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image {
+  padding: 10px;
+}
+
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 200px;
+  width: 100%;
+  user-select: none;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url(img/heart.webp);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: "Zeyada";
+  font-size: 50px;
+  color: rgb(0, 0, 100);
+  opacity: 0.75;
+  user-select: none;
+  filter: drop-shadow(2px 1.5px 1px rgba(0, 0, 105, 0.9));
+  text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  .paper {
+    padding: 20px 50px;
+    max-width: 80vw;
+  }
+
+  p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .paper {
+    padding: 15px 40px;
+    max-width: 70vw;
+  }
+
+  .paper.heart {
+    width: 180px;
+    height: 180px;
+  }
+
+  p {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .paper {
+    padding: 10px 30px;
+    max-width: 60vw;
+  }
+
+  .paper.heart {
+    width: 150px;
+    height: 150px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  img {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .paper {
+    padding: 5px 20px;
+    max-width: 50vw;
+  }
+
+  .paper.heart {
+    width: 120px;
+    height: 120px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  img {
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .paper {
+    padding: 5px 10px;
+    max-width: 40vw;
+  }
+
+  .paper.heart {
+    width: 100px;
+    height: 100px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  img {
+    max-height: 100px;
+  }
+}
